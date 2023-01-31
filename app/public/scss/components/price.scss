@@ -1,0 +1,96 @@
+@media(min-width:$widthS){
+    .wrapper{
+        .price{
+            margin-top: $margin-xxl;
+            @include flex-column;
+            align-self: stretch;
+            padding: 0 $margin-l;
+
+            .section-title{
+                align-self: center;
+            }
+
+            .price-cards{
+                margin-top: $margin-xxl;
+                @include flex-column;
+                justify-content: space-between;
+
+                .img-box{
+                    @include flex-column;
+                    width: 100%;
+                    margin-bottom: $margin-xs;
+
+                    .procedure-img{
+                        width: 100%;
+                    }
+                    .procedure-img::before{
+                        @include content-img;
+                        width: 100%;
+                        height: 536px;
+                        display: inline-block;
+                        background-image: url(../images/procedure.svg);
+                    }
+                }
+                .price-box{
+                    @include flex-column;
+                    
+
+                    .divider{
+                        @include flex-column;
+                        align-items: stretch;
+                        margin-bottom: $margin-lx;
+
+                        .procedure-container{
+                            @include flex-row;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .procedure-inform{
+                                @include flex-column;
+
+                                .text-title{
+                                    margin-bottom: $margin-xxs;
+                                }
+                            }
+                        }
+                    }
+                    .divider::after{
+                        content: "";
+                        width: 100%;
+                        height: 1px;
+                        background-color: $color-light;
+                        margin-top: $margin-s;
+                    }
+                    .divider:last-child{
+                        margin-bottom: 0;
+                    }
+                    
+                    
+                }
+            }
+        }
+    }
+
+}
+@media(min-width:$widthM){
+    .wrapper{
+        .price{
+            padding: 0;
+
+            .price-cards{
+                @include flex-row;
+                justify-content: space-around;
+                align-items: center;
+
+                .img-box{
+                    width: 50%;
+                    margin-bottom: 0;
+                    max-width: 636px;
+                }
+            }
+            .price-cards:nth-child(3){
+                flex-direction: row-reverse;
+            }
+        }
+    }
+}

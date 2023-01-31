@@ -1,0 +1,37 @@
+.left-menu-contacts{
+    @include flex-column;
+    align-items: center;
+
+    .text-title{
+        font-size: $text-size-xs;
+    }
+    .contact{
+        margin-top: $margin-xs;
+        @include no-link;
+        font-size: $text-size-xxs;
+        color: $color-light;
+    }
+    .simple-text{
+        margin-top: $margin-xs;
+        font-size: $text-size-xxs;  
+    }
+    .contact:first-child, .simple-text:first-child{
+        margin-top: $margin-m;
+    }
+    .link{
+        margin-top: $margin-m;
+    }
+    .instagramm{
+        width: $insta-width-height;
+        height: $insta-width-height;
+    }
+    .instagramm::before{
+        @include content-img;
+        display: inline-block;
+        align-self: center;
+        width: $insta-width-height;
+        height: $insta-width-height;
+        background-image: url(../images/insta.svg);
+    }
+    
+}

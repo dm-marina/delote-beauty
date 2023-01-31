@@ -1,0 +1,44 @@
+.left-menu{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    background-color: $color-dark;
+    align-items: stretch;
+    padding: $margin-lx $margin-xxl $margin-lx $margin-xxl;
+    max-width: 475px;
+    z-index: 1;
+
+    .close{
+        width: 32px;
+        height: 32px;
+        align-self: flex-start;
+        border: none;
+        background: transparent;
+    }
+    .close::after{
+       display: inline-block;
+        @include content-img;
+        width: $close-height-width;
+        height: $close-height-width;
+        background-image: url(../images/close.svg);
+    }
+        .simple-text{
+            font-size: $text-size-s;
+            margin-top: $margin-xxl;
+        }
+        .left-menu-contacts{
+            align-items: flex-start;
+            height: 100vh;
+            justify-content: flex-end;
+            .simple-text{
+                font-size: $text-size-xxs;
+                margin-top: 0;
+            }
+        }
+}
+.show-menu{
+    display: flex;
+}

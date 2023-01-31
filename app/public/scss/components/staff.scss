@@ -1,0 +1,36 @@
+@media(min-width:$widthS){
+    .wrapper{
+       align-items: stretch;
+
+        .staff{
+            padding: 0px $margin-l 0px $margin-l;
+            @include flex-column;
+            align-items: center;
+            margin-top: $margin-xxl;
+
+            .section-title{
+                font-size: $text-size-l;
+            }
+            .cards{
+                margin-top: $margin-xxl;
+            }
+        }
+    }
+}
+@media (min-width:$widthL) {
+    .wrapper{
+        .staff{
+            padding: 0;
+
+            .cards{
+                .card{
+                    margin-bottom: $margin-xl;
+                }
+                .card:nth-child(4), .card:nth-child(5), .card:nth-child(6){
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    
+}

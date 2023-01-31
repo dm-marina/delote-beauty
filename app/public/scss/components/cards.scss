@@ -1,0 +1,178 @@
+@media(min-width:$widthS){
+    .cards{
+        @include flex-column;
+        justify-content: center;
+        align-items: center;
+
+        .card{
+            @include flex-column;
+            
+            .border{
+            border: 1px solid $add-color;
+            position: relative;
+
+                .service-img{
+                    position: relative;
+                    width: $cards-img-width;
+                    height: $cards-img-height;
+                    left: -20px;
+                    bottom: -20px;
+                }
+                .hairdresser::before, .manicure::before, .pedicure::before, 
+                .cosmetology::before, .for-body::before, .makeup::before{
+                    @include content-img;
+                    display: inline-block;
+                    width: $cards-img-width;
+                    height: $cards-img-height;
+                }
+                .hairdresser::before{
+                    background-image: url(../images/hairdresser.svg);
+                }
+                .manicure::before{
+                    background-image: url(../images/manicure.svg);
+                }
+                .pedicure::before{
+                    background-image: url(../images/pedicure.svg);
+                }
+                .cosmetology::before{
+                    background-image: url(../images/cosmetology.svg);
+                }
+                .for-body::before{
+                    background-image: url(../images/for-body.svg);
+                }
+                .makeup::before{
+                    background-image: url(../images/makeup.svg);
+                }
+                .prof1::before, .prof2::before, .prof3::before,
+                .prof4::before, .prof5::before, .prof6::before{
+                    @include content-img;
+                    display: inline-block;
+                    min-width: 320px;
+                    height: 477px;
+                }
+                .prof1::before{
+                    background-image: url(../images/prof1.svg);
+                }
+                .prof2::before{
+                    background-image: url(../images/prof2.svg);
+                }
+                .prof3::before{
+                    background-image: url(../images/prof3.svg);
+                }
+                .prof4::before{
+                    background-image: url(../images/prof4.svg);
+                }
+                .prof5::before{
+                    background-image: url(../images/prof5.svg);
+                }
+                .prof6::before{
+                    background-image: url(../images/prof6.svg);
+                }
+            }
+            .service-name{
+                margin-top: $margin-l;
+                @include no-link;
+                font-size: $text-size-m;
+                color: $color-light;
+                font-family:'Garamont-regular';
+            }
+            .name{
+                margin-top: $margin-l;
+                font-size: $text-size-s;
+            }
+            .profession{
+                margin-top: $margin-xxs;
+                font-size: $text-size-xxs;
+            }
+        }
+
+        .work{
+            width: 100%;
+            height: 416px;
+            margin-bottom: $margin-s;
+        }
+        .work:last-child{
+            margin-bottom: 0;
+        }
+        .lashes::before, .makeup1::before, .manicure1::before,
+        .makeup2::before, .clients1::before, .clients2::before,
+        .manicure2::before, .clients3::before, .clients4::before{
+            @include content-img;
+            width: 100%;
+            height: 416px;
+            display: inline-block;
+        }
+        .lashes::before{
+            background-image: url(../images/lash.svg);
+        }
+        .makeup1::before{
+            background-image: url(../images/makeup1.svg);
+        }
+        .makeup2::before{
+            background-image: url(../images/makeup2.svg);
+        }
+        .manicure1::before{
+            background-image: url(../images/manicure1.svg);
+        }
+        .manicure2::before{
+            background-image: url(../images/manicure2.svg);
+        }
+        .clients1::before{
+            background-image: url(../images/clients1.svg);
+        }
+        .clients2::before{
+            background-image: url(../images/clients2.svg);
+        }
+        .clients3::before{
+            background-image: url(../images/clients3.svg);
+        }
+        .clients4::before{
+            background-image: url(../images/clients4.svg);
+        }
+    }
+}
+@media(min-width:$widthM){
+    .cards{
+        @include flex-row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-self: center;
+
+        .card{
+            width: 30%;
+            .border{
+            width: 100%;
+            margin-bottom: $margin-xl;
+
+                .service-img{
+                    width: 100%;
+                }
+                .hairdresser::before, .manicure::before, .pedicure::before, 
+                .cosmetology::before, .for-body::before, .makeup::before{
+                    width: 100%;
+                    height: $cards-img-height;
+                }
+                .prof1::before, .prof2::before, .prof3::before,
+                .prof4::before, .prof5::before, .prof6::before{
+                    @include content-img;
+                    display: inline-block;
+                    min-width: 0px;
+                    width: 100%;
+                    height: 477px;
+                }
+
+            }
+        }
+        .card:nth-child(4), .card:nth-child(5), .card:nth-child(6){
+            margin-bottom: 0;
+        }
+        .work{
+            width: 30%;
+            margin-bottom: $margin-m;
+        } 
+        .work:nth-child(7),.work:nth-child(8), .work:nth-child(9){
+            margin-bottom: 0;
+        }
+    }
+}

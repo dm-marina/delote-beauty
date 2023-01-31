@@ -1,0 +1,36 @@
+.wrapper{
+    @include flex-column;
+        justify-content: center;
+        align-items: center;
+        background-color:$color-dark;
+}
+
+.section-title{
+    font-size: $text-size-l;
+}
+.simple-text{
+    font-size: $text-size-xs;
+}
+
+.text-title{
+font-size: $text-size-s;
+}
+.text{
+    font-size: $text-size-s;
+}
+
+
+.section-title, .text-title, .main-title{
+    font-family: 'Garamont';
+}
+
+@font-face {
+    font-family: 'Garamont';
+    src: url(../fonts/Garamont/Garamond\ Bold\ font.ttf);
+}
+@font-face {
+    font-family: 'Garamont-regular';
+    src: url(../fonts/Garamont/Garamond\ Regular.ttf);
+}
+
+

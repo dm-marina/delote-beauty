@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $color-light;
+    font-family: 'Garamont-regular';
+}
+@media(min-width:$widthS){
+    .wrapper{
+        .scroll-down{
+            @include no-link;
+        }
+        .main{
+            background-image: url(../images/main-bg.svg);
+            @include img;
+            @include flex-column;
+            height: 100vh;
+            justify-content: center;
+            align-self: stretch;
+
+            .content{
+                @include flex-column;
+                height: 100vh;
+                justify-content: center;
+                align-self: center;
+                height: 100vh;
+                .main-title{
+                    font-size: $text-size-m;
+                }
+            }
+            .bottom{
+                justify-content: center;
+                @include flex-row;
+                align-items: center;
+                margin-bottom: $margin-xl;
+
+                .scroll-down{
+                    font-size: $text-size-xxs;
+                    @include no-link;
+                    align-self: flex-end;
+                    color: $color-light;
+                    font-family: 'Garamont-regular';
+
+                }
+                .scroll-down::before{
+                    @include content-img;
+                    display: inline-block;
+                    background-image: url(../images/scroll-down.svg);
+                    margin-right: $margin-m;
+                    width: $scroll-down-width;
+                    height: $scroll-down-height;
+                }
+            }
+        }
+        .about{
+            @include flex-column;
+            align-items: center;
+            padding: 0px $margin-xl 0 $margin-xl;
+            .about-title{
+                background-image: url(../images/about-title.svg);
+                @include img;
+                width: $title-width;
+                height: $title-height;
+                margin-top: $margin-xxxxl;
+            }
+            .text{
+                margin-top: $margin-xl;
+                text-align: center;
+                max-width: 800px;
+            }
+        }
+        .cards{
+            max-width: 1296px;
+            margin-top: $margin-xxxl;
+
+            .card{
+                margin-bottom: $margin-l;
+            }
+        }
+        .mini-cards{
+            @include flex-row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: $margin-xxxxxl;
+            width: 100%;
+
+            .mini-card{
+                display: flex;
+                justify-content: center;
+                width: 50%;
+            }
+            .firm1::before, .firm2::before, .firm3::before, .firm4::before{
+                @include content-img;
+                background-size: contain;
+                display: inline-block;
+                width: 50%;
+                height: 144px;
+            }
+            .firm1::before{
+                background-image: url(../images/brand1.svg);
+            }
+            .firm2::before{
+                background-image: url(../images/brand2.svg);
+            }
+            .firm3::before{
+                background-image: url(../images/brand3.svg);
+            }
+            .firm4::before{
+                background-image: url(../images/brand4.svg);
+            }
+        }
+        .works{
+            @include flex-column;
+            align-items: center;
+            align-self: stretch;
+            margin-top: $margin-xxxxxxl;
+            padding: 0px $margin-l 0px $margin-l;
+            .filter{
+                @include flex-row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: flex-start;
+                margin-top: $margin-xxl;
+
+                .filter-text{
+                    background: transparent;
+                    border: none;
+                    font-size: $text-size-xs;
+                    width: 50%;
+                }
+            }
+            .cards{
+                margin-top: $margin-xl;
+                width: 100%;
+            }
+        }
+        .footer{
+            margin-top: $margin-xxxl;
+        }
+        
+    }
+}
+@media(min-width:$widthM){
+    .wrapper{
+        align-items: stretch;
+        .main{
+            .content{
+                .main-title{
+                    font-size: $text-size-xxl;
+                }
+            }
+        }
+        .about{
+            padding: 0;
+        }
+        .mini-cards{
+            flex-wrap: nowrap;
+            .mini-card{
+                width: 25%;
+            }
+            .firm1::before, .firm2::before, .firm3::before, .firm4::before{
+                width: 25%;
+            }
+        }
+        .works{
+            align-items: stretch;
+            padding: 0;
+            .section-title{
+                align-self: center;
+            }
+            .filter{
+                flex-wrap: nowrap;
+
+                .filter-text{
+                    width: auto;
+                }
+            }
+            .cards{
+                width: 100%;
+            }
+        }
+    }
+}

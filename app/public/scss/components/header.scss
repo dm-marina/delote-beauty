@@ -1,0 +1,92 @@
+@media(min-width:$widthS){
+    .header-container{
+        @include flex-column;
+        padding: 0px $margin-l 0px $margin-l;
+        align-self: stretch;
+        .header{
+            @include flex-row;
+            justify-content: space-between;
+            margin-top: $margin-l;
+    
+            .header-mini{
+                @include flex-column;
+                justify-content: space-between;
+                
+                .link{
+                    @include no-link;
+                    font-size: $text-size-xxs;
+                    color: $color-light;
+                    font-family: 'Garamont-regular';
+                }
+
+                .active, .link:hover{
+                    color: $add-color;
+                }
+                .active::after{
+                    display: block;
+                    content: "";
+                    width: 100%;
+                    height: 1px;
+                    background-color: $add-color;
+                }
+
+                .instagramm{
+                    position: relative;
+                    width: $insta-width-height;
+                    height: $insta-width-height;
+                }
+                .instagramm::before{
+                    @include content-img;
+                    display: inline-block;
+                    align-self: center;
+                    width: $insta-width-height;
+                    height: $insta-width-height;
+                    background-image: url(../images/insta.svg);
+                }
+                .burger{
+                    border: none;
+                    background: none;
+                    width: $burger-width-height-mini;
+                    height: $burger-width-height-mini;
+                }
+                .burger::after{
+                    display: inline-block;
+                    @include content-img;
+                    background-image: url(../images/burger.svg);
+                    width: $burger-width-height-mini;
+                    height: $burger-width-height-mini;
+                }
+                // .left-menu{
+                //     display: none;
+                // }
+            }
+        }
+    }
+}
+@media(min-width:$widthM){
+    .header-container{
+        padding: 0;
+        .header{
+            justify-content: space-around;
+            width: 100%;
+    
+            .header-mini{
+                @include flex-row;
+                justify-content: space-between;
+                min-width: 300px;
+                .burger, .burger::after{
+                    width: $burger-width-height;
+                    height: $burger-width-height;
+                }
+            }
+        }   
+    }
+    .header-container::after{
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: $color-light;
+        display: inline-block;
+        margin-top: $margin-l;
+    }
+}
